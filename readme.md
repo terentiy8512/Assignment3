@@ -9,7 +9,7 @@ This is a web application for assignment 3. In this web application I used diffe
 **Installation via requirements.txt**
 
 ```shell
-$ cd Assignment 2
+$ cd Assignment3
 $ py -3 -m venv venv
 $ venv\Scripts\activate
 $ pip install -r requirements.txt
@@ -30,7 +30,7 @@ $ flask run
 
 ## Configuration
 
-The *Assignment2/.env* file contains variable settings. They are set with appropriate values.
+The *Assignment3/.env* file contains variable settings. They are set with appropriate values.
 
 * `FLASK_APP`: Entry point of the application (should always be `wsgi.py`).
 * `FLASK_ENV`: The environment in which to run the application (either `development` or `production`).
@@ -45,11 +45,11 @@ Testing requires that file *Assignment2/tests/conftest.py* be edited to set the 
 
 E.g. 
 
-`TEST_DATA_PATH = os.path.join('A:',os.sep,'PythonProjects', 'Assignment 2', 'tests', 'data')`
+`TEST_DATA_PATH = os.path.join('A:',os.sep,'PythonProjects', 'Assignment 3', 'tests', 'data')`
 
 assigns TEST_DATA_PATH with the following value (the use of os.path.join and os.sep ensures use of the correct platform path separator):
 
-`C:\PythonProjects\Assignment2\tests\data`
+`C:\PythonProjects\Assignment3\tests\data`
 
 You can then run tests from within PyCharm.
 
