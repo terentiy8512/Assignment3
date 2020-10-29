@@ -1,0 +1,669 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gainsboro;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #555;
+    line-height: 1.6em;
+}
+
+.clear{
+    clear: both;
+}
+
+.movie-background{
+    box-sizing: border-box;
+    width: 1350px;
+    margin: 35px auto;
+    background-color: snow;
+    min-height: 1175px;
+}
+
+
+#header{
+    width: 100%;
+    padding: 10px;
+    background-color: #222222;
+    text-align: center;
+    color: #ccc;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+
+#navbar{
+    background-color: #222222;
+    color: #ccc;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 100;
+    height: 4rem;
+    line-height: 4rem;
+    margin: auto;
+}
+
+#navbar-container{
+    width: 95%;
+    margin: auto;
+}
+
+#logo{
+    float: left;
+}
+
+#form-review{
+    color: black;
+}
+
+#navbar ul{
+    float:right;
+    list-style: none;
+}
+
+#navbar ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+
+#navbar a{
+    color: #ccc;
+    text-decoration: none;
+}
+
+#navbar a:hover{
+    color: orange;
+}
+
+
+#search-menu{
+    box-sizing: border-box;
+    width: 400px;
+    float: left;
+    position: fixed;
+    margin-top: 50px;
+}
+
+#search-bar-margin{
+    box-sizing: border-box;
+    padding: 10px;
+    color: black;
+    border: 3px solid #555555;
+    border-radius: 20px;
+    margin: 25px;
+    height: 440px;
+}
+
+#search-menu p{
+    font-weight: bold;
+    padding: 10px;
+}
+
+
+#categories p{
+    border: 2px solid #555555;
+    background-color: #cccccc;
+    border-radius: 35px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 200;
+    margin: 25px 80px;
+    padding: 10px;
+}
+
+#categories a{
+    text-decoration: none;
+    color: black;
+}
+
+#categories a:hover{
+    text-decoration: none;
+    list-style: none;
+    color: #c78114;
+}
+
+
+
+#home-page{
+    padding: 30px;
+    width: 70%;
+    float: right;
+    color: black;
+    box-sizing: border-box;
+}
+
+#home-page h1{
+    padding-top: 40px;
+    text-align: center;
+    font-size: 40px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+#home-page p {
+    display: inline-block;
+    padding: 15px;
+    color: black;
+    font-weight: bold;
+}
+
+
+#home-page a:hover{
+    color: black;
+}
+
+#home-page a{
+    text-decoration: none;
+    color: #222222;
+    font-weight: bold;
+}
+
+
+#less-black a {
+    color: #767676;
+}
+
+#movie-container{
+    height: 130px;
+
+}
+
+#movie-container2{
+    height: auto;
+}
+
+#margin-container{
+    margin: 30px;
+}
+
+#margin-container h3{
+    color: black;
+    text-align: center;
+    padding: 40px;
+    font-size: 36px;
+}
+
+#movie-left{
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+}
+
+#movie-right {
+    box-sizing: border-box;
+    margin: 10px 0;
+    width: 50%;
+    float: left;
+    display: inline-block;
+}
+
+#movie-right2 {
+    box-sizing: border-box;
+    margin: 35px 0;
+    width: 50%;
+    float: left;
+    display: inline-block;
+}
+
+#rating-watchlist{
+    float: right;
+    color: black;
+    margin-right: 40px;
+    display: inline;
+}
+
+#rating{
+    display: inline-block;
+    color: darkgreen;
+}
+
+.watchlist {
+    margin: 15px;
+    padding: 8px;
+    border: #555555 1px solid;
+    border-radius: 15px;
+    background-color: #ccc;
+    display: inline-block;
+    color: black;
+}
+
+.watchlist a {
+    font-weight: normal;
+    text-decoration: none;
+    color: black;
+}
+
+.watchlist a:hover{
+    color: orange;
+}
+
+.movie-background h1{
+    text-align: center;
+    padding: 35px;
+    color: black;
+}
+
+#watchlist-container{
+    padding: 25px;
+    height: 140px;
+}
+
+#rating{
+    color: green;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+
+#watchlist-container a{
+    text-decoration: none;
+    color: black;
+    height: 140px;
+    font-size: 20px;
+}
+
+#watchlist-container a:hover{
+    color: #c78114;
+}
+
+#watchlist-left{
+    padding: 15px;
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    color: black;
+}
+
+#watchlist-left p {
+    padding: 10px;
+    color: black;
+    font-size: 16px;
+}
+
+#watchlist-right{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding-left: 280px;
+
+}
+
+#watchlist-right div{
+    display: inline-block;
+}
+
+
+#watchlist{
+    margin-top: 20px;
+    margin-right: 0;
+    padding: 8px;
+    border: #555555 1px solid;
+    border-radius: 15px;
+    background-color: #cccccc;
+    display: inline-block;
+}
+
+#watchlist a {
+    font-weight: normal;
+    text-decoration: none;
+    color: black;
+}
+
+#watchlist a:hover{
+    color: #c78114;
+}
+
+
+#watchlist2{
+    margin-top: 20px;
+    margin-right: 0;
+    padding: 8px;
+    border: #555555 1px solid;
+    border-radius: 15px;
+    background-color: #cccccc;
+    display: inline-block;
+}
+
+#watchlist2 a {
+    font-weight: normal;
+    text-decoration: none;
+    color: black;
+}
+
+#watchlist2 a:hover{
+    color: #c78114;
+}
+
+
+
+#movie-name {
+    padding: 0;
+    margin: 10px;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+#movie-name a{
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+#movie-genre{
+    margin-top: 15px;
+    margin-left: 40px;
+    font-size: 16px;
+    color: black;
+}
+
+
+#login-page{
+    background-color: gainsboro;
+    margin-top: 200px;
+}
+
+#container-login{
+    border: #222222 solid 3px;
+    border-radius: 25px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #cccccc;
+}
+
+.login-form {
+    padding: 40px;
+    width:100%;
+    color: black;
+    display: block;
+    text-align: center;
+}
+
+.login{
+    font-weight: bold;
+
+}
+.errors{
+    padding: 15px;
+    list-style: none;
+    font-size: 15px;
+}
+
+input[type='submit'] {
+    width: 100%;
+    background-color: #777777;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#rating-button input[type='text'] {
+    width: 100%;
+    background-color: white;
+    padding: 12px;
+    color: black;
+    font-size: 14px;
+    border: black 2px solid;
+    margin-bottom: 20px;
+}
+
+input[type='text'] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        color: black;
+}
+
+input[type='password'] {
+        color: black;
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+}
+
+.footer {
+    box-sizing: border-box;
+    padding-top: 10px;
+    width: 100%;
+    background-color: #767676;
+    color: black;
+    text-align: center;
+
+}
+
+#movie-description{
+    padding: 40px;
+    width: 70%;
+    color: black;
+    float: left;
+    box-sizing: border-box;
+}
+
+#movie-description h1{
+    color: black;
+    margin: 25px 0;
+    font-size: 35px;
+    text-align: left;
+}
+
+#description p {
+    display: inline;
+
+}
+#description{
+    margin: 12px;
+    width: 70%;
+}
+
+.key {
+    font-weight: bold;
+}
+
+#description-height{
+    height: 600px;
+}
+
+
+#nav-left{
+    float: left;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+#nav-right{
+    float: right;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+.active{
+    text-align: center;
+    width: 100px;
+    padding: 5px;
+    border: #767676 3px solid;
+    border-radius: 15px;
+    background-color: #cccccc;
+}
+
+.active a{
+    text-decoration: none;
+    color: black;
+}
+.active a:hover{
+    color: orange;
+}
+
+.unActive{
+    text-align: center;
+    width: 100px;
+    padding: 5px;
+    border: #767676 3px solid;
+    border-radius: 15px;
+    background-color: ghostwhite;
+    color: #555555;
+}
+
+
+
+#random-movies{
+    box-sizing: border-box;
+    width: 30%;
+    float: left;
+    padding: 25px;
+}
+
+#random-movies h1{
+    color: black;
+    font-size: 24px;
+    margin: 20px;
+}
+
+#random-movies a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#random-movies a:hover {
+    color: orange;
+}
+
+#random-container{
+    text-align: center;
+    margin: 50px 0;
+    color: black;
+    padding: 5px;
+    font-size: 18px;
+}
+
+#reviews{
+    width: 100%;
+    padding: 0 25px;
+    margin-top: 25px;
+    box-sizing: border-box;
+}
+
+
+.review-block{
+    border: #555555 3px solid;
+    border-radius: 15px;
+    margin: 40px 0;
+    padding: 15px;
+    background-color: whitesmoke;
+}
+
+.review-block p{
+    display: inline;
+
+}
+
+#user{
+    width: 50%;
+    float: left;
+}
+
+#user p{
+    display: inline;
+}
+
+#time{
+    width: 50%;
+    float:left;
+    padding-left: 75px;
+}
+
+#time p {
+    display: inline;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+#reviews h2{
+    padding-top: 20px;
+    font-size: 30px;
+}
+
+#add-review{
+    float: right;
+    color: black;
+}
+
+#add-review a{
+    text-decoration: none;
+    padding: 8px;
+    border: #767676 3px solid;
+    border-radius: 15px;
+    background-color: #cccccc;
+    text-align: center;
+    color: black;
+}
+
+#add-review a:hover{
+    color: #c78114;
+}
+
+#login-register-header{
+    margin: 40px;
+    text-align: center;
+    color: black;
+}
+
+#post-review{
+    font-weight: bold;
+    color: black;
+    display: block;
+}
+
+
+
+#search-container h1{
+    padding-top: 50px;
+    text-align: center;
+    margin: 15px;
+    color: black;
+    font-size: 38px;
+}
+
+#search-string{
+    width: 700px;
+    margin-left: 325px;
+
+}
+
+#no-movies{
+    text-align: center;
+    color: black;
+    margin: 25px;
+}
+
+.text{
+    padding: 25px;
+    font-size: 16px;
+    margin: 8px 0;
+    color: black;
+}
+
+.textarea{
+    font-size: 16px;
+}

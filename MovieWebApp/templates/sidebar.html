@@ -1,0 +1,11 @@
+<aside>
+    <p>Choose category of search:</p>
+    <hr>
+    <div id="categories">
+        <p><a href="{{url_for('search_bp.search_for_movie', category = 'title', page = '0', search_string = 'None')}}">Title</a></p>
+        <p><a href="{{url_for('search_bp.search_for_movie', category = 'genre', page = '0', search_string = 'None')}}">Genre</a></p>
+        <p><a href="{{url_for('search_bp.search_for_movie', category = 'actor', page = '0', search_string = 'None')}}">Actor</a></p>
+        <p><a href="{{url_for('search_bp.search_for_movie', category = 'director', page = '0', search_string = 'None')}}">Director</a></p>
+    </div>
+</aside>
+

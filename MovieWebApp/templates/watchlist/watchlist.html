@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<main class="movie-background">
+    <h1> Your watchlist </h1>
+    {% if watchlist == None %}
+        <p id="no-movies">
+            You don't have any movies in your watchlist, please add some.
+        </p>
+    {% else %}
+        {% for movie_dict in watchlist %}
+            <div id="watchlist-container">
+                <div id="watchlist-left">
+                    <h2><a href="{{movie_dict['hyperlink']}}">{{movie_dict['Title']}} {{movie_dict['Release year']}}</a></h2>
+
+                    <p>{{movie_dict['Genres']}}</p>
+                </div>
+
+                <div id="watchlist-right">
+                    <p id="rating">
+                        Rating: {{movie_dict['Rating']}}
+                    </p>
+                    <div id="add-remove-watchlist">
+                        {% if movie_dict['added_to_watchlist'] == "True" %}
+                            <div class="watchlist">
+                                <p><a href="{{url_for('watchlist_bp.remove_from_watchlist', rank = movie_dict['Rank']) }}"> remove from watchlist</a></p>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <hr>
+            </div>
+
+        {% endfor %}
+    {% endif %}
+</main>
+{% include 'footer.html' %}
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<main class="movie-background">
+    <div>
+        <div id="search-menu">
+            <div id="search-bar-margin">
+                {% include 'sidebar.html' %}
+            </div>
+        </div>
+
+        <div id="home-page">
+            <div>
+                <h1>Movies </h1>
+                    <p>Top 20 movies</p>
+                    <p id="less-black"><a href="{{first_movie['hyperlink']}}">All movies</a></p>
+            </div>
+
+            <div id="margin-movies">
+                {% for movie in top_20_movies %}
+                <hr>
+                <div id="movie-container">
+                    <div id="movie-left">
+                        <div id="movie-name">
+                            {{movie['Rank']}}.
+                            <a href="{{movie.hyperlink}}">{{movie['Title']}}</a>
+                            {{movie['release_year']}}
+                        </div>
+                        <div id="movie-genre">
+                            {{movie['Genres']}}
+                        </div>
+                    </div>
+                    <div id="movie-right">
+                        <div id="rating-watchlist">
+                            <div id="rating">
+                                Rating: {{movie['Rating']}}
+                            </div>
+
+                            {% if movie['added_to_watchlist'] == "False" %}
+                                <div id="watchlist">
+                                    <a href="{{url_for('home_bp.add_to_watchlist', rank = movie['Rank']) }}">add to watchlist</a>
+                                </div>
+                            {% else %}
+                                <div id="watchlist2">
+                                    <a href="{{url_for('home_bp.add_to_watchlist', rank = movie['Rank']) }}"> remove from watchlist</a>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                {% endfor %}
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="clear"></div>
+
+
+
+    </div>
+
+</main>
+{% include 'footer.html' %}
+{% endblock%}

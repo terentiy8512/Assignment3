@@ -1,0 +1,15 @@
+<nav id="navbar-container">
+    <div id="logo">
+        <a href="{{ url_for('home_bp.home') }}">Movie Web Search</a>
+    </div>
+    <ul>
+        {% if 'username' in session %}
+            <li><a href="{{url_for('watchlist_bp.watchlist')}}">Watchlist</a></li>
+            <li><a href="{{ url_for('home_bp.home') }}">Hello, {{ session['username'] }}</a></li>
+            <li><a class="btn-nav" href="{{ url_for('authentication_bp.logout') }}">Logout</a></li>
+        {% else %}
+            <li><a class="btn-nav" href="{{ url_for('authentication_bp.login') }}">Login</a></li>
+            <li><a class="btn-nav" href="{{ url_for('authentication_bp.register') }}">Register</a></li>
+        {% endif %}
+    </ul>
+</nav>

@@ -1,0 +1,111 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<main class="movie-background">
+    <div>
+        <div id="random-movies">
+            <h1>You might want to watch:</h1>
+            {% for movie in random_movies %}
+                <div id="random-container">
+                    <p><a href="{{movie['hyperlink']}}">Title: {{movie['Title']}}</a></p>
+                    <p>Genre: {{movie['Genres']}}</p>
+                    <p>Rating: {{movie['Rating']}}</p>
+                </div>
+                <hr>
+            {% endfor %}
+        </div>
+
+        <div id="movie-description">
+            <h1>{{current_movie['Title']}}</h1>
+
+            <div id="description-height">
+                {% for key, value in current_movie.items() %}
+                    {% if key != "Title" and key != "Rank" and key != "add_review_url"  and key != "added_to_watchlist"%}
+                        <div id="description">
+                            {% if key == "Revenue" and value != "N/A millions"%}
+                                <p class="key">{{key}}:</p>
+                                <p calss="value">{{value}}</p>
+                                <hr>
+                            {% elif key == "Revenue" and value == "N/A millions" %}
+
+                            {% else %}
+                                <p class="key">{{key}}:</p>
+                                <p class="value">{{value}}</p>
+                            {% if key != "Runtime"%}
+                                <hr>
+                            {% endif %}
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            {% if current_movie['added_to_watchlist'] == "False" %}
+            <div class="watchlist">
+                <a href="{{url_for('movies_bp.add_to_watchlist', rank = current_movie['Rank'])}}">add to watchlist</a>
+            </div>
+            {% else %}
+            <div class="watchlist">
+                <a href="{{url_for('movies_bp.add_to_watchlist', rank = current_movie['Rank']) }}"> remove from watchlist</a>
+            </div>
+            {% endif %}
+            <div class="clear"></div>
+            <br>
+            <div id="movie-navigation">
+                <div id="nav-left">
+                    {% if prev_movie_url != None %}
+                        <p class="active"><a href={{prev_movie_url}}>previous</a></p>
+                    {% else %}
+                        <p class="unActive">previous</p>
+                    {% endif %}
+                </div>
+                <div id="nav-right">
+                    {% if next_movie_url != None %}
+                        <p class="active"><a href={{next_movie_url}}>next</a></p>
+                    {% else %}
+                        <p class="unActive">next</p>
+                    {% endif %}
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div id="reviews">
+                <h2>Reviews:</h2>
+                {% if reviews == None %}
+                    <div class="review-block">
+                        There are no reviews for this movies.
+                    </div>
+                {% else %}
+                    {% for review in reviews %}
+                        <div class="review-block">
+                            <div id="user">
+                                <p class="bold"> User:</p>
+                                <p>{{review['user']}}</p>
+                            </div>
+
+                            <div id="time">
+                                <p class="bold">Date: </p>
+                                <p>{{review['time']}}</p>
+                            </div>
+                            <div class="clear"></div>
+                            <div>
+                                <p class="bold">Said: </p>
+                                <p>{{review['review text']}}</p>
+                            </div>
+                            <div>
+                                <p class="bold">Rating:</p>
+                                <p>{{review['rating']}}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
+                <div id="add-review">
+                    <a href="{{current_movie['add_review_url']}}">add review</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</main>
+{% include 'footer.html' %}
+{% endblock%}

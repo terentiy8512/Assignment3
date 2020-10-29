@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block content %}
+<main class="movie-background">
+    <form action="{{handler_url}}" method="POST">
+        {{form.csrf_token}} <!-- Need to include this token - Flask WTForms requires it. -->
+        <div id="search-container">
+            <h1>Search by {{search_category}}</h1>
+            <br>
+            <div id="search-string">
+                {{form.search_string}}
+                {% if form.search_string.errors %}
+                <ul class="errors">
+                    {% for error in form.review.errors %}
+                    <li>{{error}}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+
+                {{ form.submit }}
+            </div>
+        </div>
+    </form>
+</main>
+
+{% include 'footer.html' %}
+{% endblock %}

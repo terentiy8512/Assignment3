@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+{% block content %}
+<main class="movie-background">
+
+    <div id="margin-container">
+        <h3>Search result</h3>
+        {% for movie in result_list %}
+            {% if movie['page'] == page %}
+                <hr>
+                <div id="movie-container2">
+                    <div id="movie-left">
+                        <div id="movie-name">
+                            {{movie['Rank']}}.
+                            <a href="{{url_for('movies_bp.brows_movies', rank = movie['Rank'])}}">{{movie['Title']}}</a>
+                            {{movie['release_year']}}
+                        </div>
+                        <div id="movie-genre">
+                            <lu>
+                                <li>Genres: {{movie['Genres']}}</li>
+                                <li>Director: {{movie['Director']}}</li>
+                                <li>Actors: {{movie['Actors']}}</li>
+                            </lu>
+                        </div>
+                    </div>
+                    <div id="movie-right2">
+                        <div id="rating-watchlist">
+                            <div id="rating">
+                                Rating: {{movie['Rating']}}
+                            </div>
+
+                            {% if movie['added_to_watchlist'] == "False" %}
+                                <div id="watchlist">
+                                    <a href="{{url_for('search_bp.add_to_watchlist_search', category = search_category, rank = movie['Rank'], search_string = search_string, page = current_page)}}">add to watchlist</a>
+                                </div>
+                            {% else %}
+                                <div id="watchlist2">
+                                    <a href="{{url_for('search_bp.add_to_watchlist_search', rank = movie['Rank'], search_string = search_string, page = current_page, category = search_category)}}"> remove from watchlist</a>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <div>
+        <div id="movie-navigation">
+            <div id="nav-left">
+                {% if prev_page != None %}
+                <p class="active"><a href={{prev_page}}>previous</a></p>
+                {% else %}
+                <p class="unActive">previous</p>
+                {% endif %}
+            </div>
+            <div id="nav-right">
+                {% if next_page != None %}
+                <p class="active"><a href={{next_page}}>next</a></p>
+                {% else %}
+                <p class="unActive">next</p>
+                {% endif %}
+            </div>
+            <div class="clear"></div>
+            </div>
+    </div>
+    <br>
+</main>
+
+{% include 'footer.html' %}
+{% endblock %}
