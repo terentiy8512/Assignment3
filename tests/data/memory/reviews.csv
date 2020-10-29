@@ -1,0 +1,5 @@
+user-id,movie-rank,review-text,rating,timestamp
+1,1,"This movie is awesome!",7.9,2020-02-28 14:31:26
+2,3,"Not really liked it.",5.1,2020-02-28 14:39:51
+2,1,"This movie nice!",6.0,2020-04-28 10:29:50
+3,1,"This movie good! I really liked actors and the theme of this movie is really fun! Hope there will be a second part!",7.1, 2020-02-22 20:39:10
