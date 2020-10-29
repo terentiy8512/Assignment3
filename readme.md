@@ -41,7 +41,7 @@ The *Assignment3/.env* file contains variable settings. They are set with approp
 
 ## Testing
 
-Testing requires that file *Assignment2/tests/conftest.py* be edited to set the value of `TEST_DATA_PATH`. You should set this to the absolute path of the *Assignment2/tests/data* directory. 
+Testing requires that file *Assignment2/tests/conftest.py* be edited to set the value of `TEST_DATA_PATH`. You should set this to the absolute path of the *Assignment3/tests/data* directory. 
 
 E.g. 
 
